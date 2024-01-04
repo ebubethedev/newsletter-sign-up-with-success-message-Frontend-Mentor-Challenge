@@ -515,7 +515,7 @@ body {
     cursor: pointer;
   }
   .success-msg[data-visible=false] {
-    transform: translateY(100%);
+    display: none;
   }
   .success-msg[data-visible=true] {
     transform: translateY(0%);
