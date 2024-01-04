@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://ebubethedev.github.io/newsletter-sign-up-with-success-message-Frontend-Mentor-Challenge/)
+- Solution URL: [newsletter-sign-up-with-success-message-Frontend-Mentor-Challenge](https://ebubethedev.github.io/newsletter-sign-up-with-success-message-Frontend-Mentor-Challenge/)
 
 ## My process
 
