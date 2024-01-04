@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+  <div class="container" data-visibility="true">
+    <div class="landing-img">
+    </div>
+    <div class="form">
+      <h1 class="form-h1">Stay updated!</h1>
+      <p class="form-p">Join 60,000+ product managers receiving monthly updates on:</p>
+      <div class="form-more-info">
+        <div class="more-info">
+          <div class="more-info-img"><img src="assets/images/icon-list.svg" alt=""></div>
+          <p class="more-info-tx">Product discovery and building what matters</p>
+        </div>
+
+        <div class="more-info">
+          <div class="more-info-img"><img src="assets/images/icon-list.svg" alt=""></div>
+          <p class="more-info-tx">Measuring to ensure updates are a success</p>
+        </div>
+
+        <div class="more-info">
+          <div class="more-info-img"><img src="assets/images/icon-list.svg" alt=""></div>
+          <p class="more-info-tx">And much more!</p>
+        </div>
+      </div>
+
+      <label for="mail" class="mail-container">
+        <div class="mail-tx-container">
+          <p class="mail-tx">Email address</p>
+          <p class="error-msg" id="email-error"></p>
+        </div>
+        <input type="email" name="mail" class="mail-input" id="mail" spellcheck="false" placeholder="email@company.com"
+          onkeyup="validateEmail()" required>
+
+      </label>
+      <button class="subscribe-btn" id="subscribe-btn" aria-controls="success-msg" aria-expanded="false">Subscribe to
+        monthly newsletter</button>
+    </div>
+  </div>
+
+  <div class="success-msg" data-visible="false" id="success-msg">
+    <div class="success-msg-img">
+      <img src="assets/images/icon-success.svg" alt="">
+    </div>
+    <h1 class="success-msg-h1">
+      Thanks for <br> subscribing!
+    </h1>
+    <p class="success-msg-tx">
+      A confirmation email has been sent to <span>ash@loremcompany.com</span>. Please open it and click the button
+      inside to confirm
+      your subscription.
+    </p>
+    <div class="btn-container">
+      <button class="success-msg-btn" aria-expanded="true">Dismiss message</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

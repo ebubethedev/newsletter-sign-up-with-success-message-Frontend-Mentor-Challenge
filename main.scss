@@ -1,0 +1,276 @@
+@import 'scss/resets';
+@import 'scss/variables';
+@import 'scss/mixins';
+@import 'scss/classes';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: $general-fontsize;
+    color: $dark-slate-grey;
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+@media (min-width: 35em) {
+    body {
+        background-color: $dark-slate-grey;
+    }
+
+.container[data-visibility="false"] {
+    display: none;
+}
+.container[data-visibility="true"] {
+    transform: translateY(0%);
+}
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+    background-color: $white;
+    margin: 15rem 5rem;
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.landing-img {
+    background: url("assets/images/illustration-sign-up-desktop.svg") no-repeat;
+    height: 593px;
+    width: 400px;
+}
+
+
+.form-h1 {
+    font-size: 3rem;
+    font-weight: map-get($font-weight ,bold);
+}
+.form-more-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.more-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mail-tx {
+    padding-bottom: 0.5rem;
+    font-size: 12px;
+}
+.mail-input {
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid $grey;
+    outline: none;
+}
+.mail-input::placeholder {
+    color: $grey;
+}
+.subscribe-btn {
+    background-color: $charcoal-grey;
+    width: 300px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: $white;
+    cursor: pointer;
+}
+.success-msg[data-visible="false"] {
+    transform: translateY(100%);
+}
+.success-msg[data-visible="true"] {
+    transform: translateY(0%);
+}
+#email-error {
+    font-size: 12px;
+    color: $tomato;
+    font-weight: map-get($font-weight, regular);
+    padding-right: 80px;
+}
+.mail-tx-container {
+    display: flex;
+    justify-content: space-between;
+}
+.success-msg-btn {
+    background-color: $charcoal-grey;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: $white;
+    cursor: pointer;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.success-msg {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 375px;
+    height: 375px;
+    margin: 10rem auto;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: $white;
+    width: 45%;
+    letter-spacing: 1px;
+}
+.success-msg-tx {
+    span {
+        font-weight: map-get($font-weight, bold );
+    }
+}
+.success-msg[data-visible="false"] {
+    display: none;
+}
+.success-msg[data-visible="true"] {
+    transform: translateY(0%);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 35em) {
+    .container[data-visibility="false"] {
+        display: none;
+    }
+    .container[data-visibility="true"] {
+        transform: translateY(0%);
+    }
+    .form {
+        margin: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+    .landing-img {
+        background: url('assets/images/illustration-sign-up-mobile.svg') no-repeat;
+        height: 284px;
+        background-position: center;
+    }
+    .form-h1 {
+        font-weight: map-get($font-weight ,bold);
+    }
+    .form-more-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .more-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    //email styles
+    .mail-container {
+        margin-top: 1rem;
+    }
+    .mail-tx {
+        padding-bottom: 0.5rem;
+        font-size: 12px;
+    }
+    .mail-input {
+        width: 300px;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid $grey;
+        outline: none;
+    }
+    .mail-input::placeholder {
+        color: $grey;
+    }
+    .subscribe-btn {
+        background-color: $charcoal-grey;
+        width: 300px;
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        color: $white;
+        cursor: pointer;
+    }
+    .success-msg[data-visible="false"] {
+        transform: translateY(100%);
+    }
+    .success-msg[data-visible="true"] {
+        transform: translateY(0%);
+    }
+    #email-error {
+        font-size: 12px;
+        color: $tomato;
+        font-weight: map-get($font-weight, regular);
+        padding-right: 80px;
+    }
+    .mail-tx-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    //success msg
+    .success-msg {
+        margin: 1rem;
+    }
+    .success-msg-img {
+        margin-top: 15vh;
+    }
+    .success-msg-h1 {
+        margin-top: 2vh;
+    }
+    .success-msg-tx {
+        margin-bottom: 10vh;
+        line-height: 30px;
+        span {
+            font-weight: map-get($font-weight, bold );
+        }
+    }
+    //success msg button
+    .success-msg-btn {
+        background-color: $charcoal-grey;
+        width: 100%;
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        color: $white;
+        cursor: pointer;
+    }
+    .btn-container {
+        position: absolute;
+        bottom: -28rem;
+        width: 100%;
+    }
+}
